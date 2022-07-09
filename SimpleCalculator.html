@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interest</title>
+<script>
+function cal()
+{
+p=document.getElementById("p").value;
+r=document.getElementById("r").value;
+n=document.getElementById("t").value;
+alert("Simple interset of principal amount=" +(p*n*r/100));
+}
+</script>
+</head>
+<body>
+<h1>Simple Interest Calculator</h1>
+Amount:<input id="p"><br />
+Rate of interest:<input id="r"><br />
+TIme (in years):<input id="t"><br />
+<button onclick="cal()">OK</button>
+</body>
+</html>

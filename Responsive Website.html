@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="./CSS/stylee.css" >
+    <link rel="stylesheet" media="screen and (max-width:1170px)" href="./CSS/phone.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://cdn.pixabay.com/photo/2022/01/01/17/22/microwave-6908439__340.png" alt="YourFavMeal.com"
+                class="src">
+        </div>
+
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#client-section">Our Clients</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to YourFavMeal</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sapiente similique odio minus sit voluptas!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi mollitia, deserunt molestias eveniet
+            voluptatibus vitae.</p>
+
+        <button class="btn">Order Now</button>
+    </section>
+    <hr>
+    <secion id="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246__340.jpg" alt="">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab inventore itaque
+                    necessitatibus libero exercitationem quos dolor corrupti sequi, dolorum doloremque unde rem tempora
+                    amet at ad maxime, doloribus sint nihil ut expedita!</p>
+            </div>
+
+            <div class="box">
+                <img src="https://media.istockphoto.com/photos/arabic-and-middle-eastern-dinner-table-hummus-tabbouleh-salad-salad-picture-id1175505781?k=20&m=1175505781&s=612x612&w=0&h=STomby2lCtcvpl_hxK6RhknQQWrkvpkHcoDLD4zttFk="
+                    alt="">
+                <h2 class="h-secondary center">Bulk Ordering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab inventore itaque
+                    necessitatibus libero exercitationem quos dolor corrupti sequi, dolorum doloremque unde rem tempora
+                    amet at ad maxime, doloribus sint nihil ut expedita!</p>
+            </div>
+
+            <div class="box">
+                <img src="https://cdn.pixabay.com/photo/2018/05/15/09/01/foodora-3402507__340.jpg" alt="">
+                <h2 class="h-secondary center">Food Delivery</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab inventore itaque
+                    necessitatibus libero exercitationem quos dolor corrupti sequi, dolorum doloremque unde rem tempora
+                    amet at ad maxime, doloribus sint nihil ut expedita!</p>
+            </div>
+        </div>
+    </secion>
+<hr>
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="https://media.istockphoto.com/photos/unhappy-and-disappointed-customer-giving-low-rating-and-negative-in-picture-id1065782522?k=20&m=1065782522&s=612x612&w=0&h=4LVh4oGJsnfLwWV0VCzmM580KjM3rpnhVdj7vCIVMxk="
+                    alt="Our Clients">
+
+            </div>
+
+            <div class="client-item">
+                <img src="https://media.istockphoto.com/photos/womens-hand-typing-on-mobile-smartphone-live-chat-chatting-on-web-picture-id1217093906?k=20&m=1217093906&s=612x612&w=0&h=C_GFUdkBDSaf0nYGiyTxyA3A4zLowOcS31ZI-XOPQlc="
+                    alt="Our Clients">
+
+            </div>
+
+            <div class="client-item">
+                <img src="https://media.istockphoto.com/photos/marketing-segmentation-picture-id503554754?k=20&m=503554754&s=612x612&w=0&h=3-tbDCLG-0iGfP_xys2KhRq3LPbvGXacIofsjRoLyGI="
+                    alt="Our Clients">
+
+            </div>
+
+            <div class="client-item">
+                <img src="https://media.istockphoto.com/photos/businesswoman-on-blurred-background-rating-with-hand-drawn-stars-picture-id1201873520?k=20&m=1201873520&s=612x612&w=0&h=EX96jRTESFff4EYfgLxWOMQTUnkanE9BXjVxFZz_PZQ="
+                    alt="Our Clients">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter Your Email id">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter Your Phone Number">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy www.YourFavMeal.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<hmtl>
+<head>
+<title> Page Title</title>
+<script>
+cons $ = el => document.querySelector(el); const $$ = el =>
+document.querySelectorAll(el); const id = arg =>
+document.getElementById(arg); const cl = arg => 
+document.getEelmentsByClassName(arg); const randint = (min,max) => Math.floor(Math.random() * (max - min + 1)+ min); const css = (html_elem, styles) => 
+{for(let attr in styles) html_elem.style[attr] = styles[attr]; }; const hide = html_elem => {html_elem.style.display = "none"; }; const show = 
+(html_elem, value = "block") => {html_elem.style.display = value; };
+</script>
+</head>
+
+ <body>
+<div id = "game" class = "container">
+<h1>Tic Tac Toe</h1>
+<div class = "header">
+<div id = "status"> </div>
+<button on click="restartGame()">restart</button>
+<div>
+<select id = "select">
+<option value="pp">Player vs Player</option>
+<option value="pb" selected>Player vs bot </option>
+<option value="bb">bot vs bot </option>
+</selected>
+</div>
+<div id = "board" class="board"></div>
+</div>
+</body>
+</html>
