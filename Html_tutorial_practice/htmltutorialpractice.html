@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document HTML</title>
+    <style>
+        html {
+            font-size: 25px;
+        }
+
+        .box {
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+        }
+
+        #box1 {
+            position: relative;
+            top: 49px;
+            z-index: -35;
+            background-color: blueviolet;
+        }
+
+        #box2 {
+            /*display: none;*/
+            /*visibility: hidden;*/
+            position: relative;
+            top: 14px;
+            z-index: -165;
+            background-color: rgb(122, 9, 9);
+        }
+
+        #box3 {
+            background-color: olive;
+        }
+
+        #box4 {
+            background-color: rgb(11, 131, 161);
+        }
+
+        .container {
+            height: 544px;
+            width: 100%;
+            border: 2px solid black;
+            /*Flex Properties for flex container */
+            display: flex;
+            /* 1. flex-direction: row;
+            flex-direction: column;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse;*/
+
+            /*2. flex-wrap: wrap-reverse;*/
+            /* flex-wrap: wrap;*/
+
+            /*3. ShortHand for flex*/
+            /*flex-flow: row wrap;*/
+
+            /*4. Justify content*/
+            /*justify-content: center;
+            justify-content: space-between;
+            justify-content: space-evenly;
+            justify-content: space-around;*/
+
+            /*5. Align Items*/
+            /*align-items: center;
+           align-items: flex-end;
+           align-items: flex-start;
+           align-items: stretch;*/
+        }
+
+
+        /*Flex Properties for flex item */
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            border: 2px solid green;
+            margin: 10px;
+            padding: 3px;
+        }
+
+        #item-1 {
+            /*Higher the order, later it shows up in the container*/
+            /*order: 2;*/
+
+            /*flex-grow: 2;
+            flex-shrink: 2;*/
+        }
+
+        #item-2 {
+            /*flex-grow: 3;
+            flex-shrink: 3;*/
+            flex-basis: 320px;
+            /*When flex direction is set to row this will control width of the item
+            when flex-direction is set to column this will control the height of the item*/
+
+        }
+
+        #item-3 {
+            /*flex: 2 2 230px;*/
+            /* align-self: flex-end;
+           align-self: flex-start;
+           align-self: center;*/
+        }
+
+        .container2 {
+            /* width: 400px;*/
+            /*height: 344px;*/
+            height: 100vh;
+            /* vh stands for viewport height*/
+            width: 100vw;
+            /* vw stands for viewport width*/
+            font-size: 10px;
+            border: 2px solid brown;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #first {
+            /*  font-size: 3em;
+            padding: 3em;*/
+        }
+
+        #second {
+            /* font-size: 3rem;
+            padding: 3rem;*/
+        }
+
+        .Box{
+            text-align: center;
+            font-size: 72px;
+            background-color: brown;
+            color: cornsilk;
+            display: none;
+        }
+
+        @media only screen and (max-width:300px){
+            #Box-1{
+                display: block;
+                background-color: cyan;
+            }
+        }
+
+        @media only screen and (min-width: 300px)  and (max-width:500px){
+            #Box-2{
+                display: block;
+                background-color: darkorchid;
+            }
+        }
+
+        @media only screen and (min-width: 500px)  and (max-width:800px){
+            #Box-3{
+                display: block;
+                background-color: khaki;
+            }
+        }
+
+        @media only screen and (min-width: 800px){
+            #Box-2{
+                display: block;
+                background-color: mediumseagreen;
+            }
+        }
+
+                 /*SELECTORS*/
+        h3{
+            background-color: pink;
+            color:rgb(122, 9, 9);
+            font-weight: bold;
+            text-align: center;
+        }
+        
+
+        div li p{
+            background-color: skyblue;
+            color: rgb(12, 12, 12);
+            font-weight: bold;
+        }
+
+        div > p{
+            background-color: violet;
+            color: rgb(65, 92, 10);
+            font-weight: bold;
+        }
+
+        div + p{
+            background-color: cyan;
+            color: rgb(119, 114, 114);
+        }
+
+
+        .container4{
+            display: block;
+            width: 233px;
+            margin: auto;
+            border: 2px solid rgb(32, 65, 70);
+        }
+        
+        input{
+            display: block;
+        }
+
+        input[type='text']{
+            padding: 10px;
+            border: 2px solid brown;
+        }
+
+       a[target]{
+           font-size: 35px;
+           color:cadetblue;
+        }
+
+        a[target='_self']{
+            font-size: 24px;
+            color: pink;
+        }
+
+        input[type='email']{
+            color: khaki;
+            border: 2px solid rgb(22, 78, 46);
+            padding:14px;
+        }
+
+        li:nth-child(3){
+            color: slateblue;
+        }
+
+        li:nth-child(2n+0){
+            color: magenta;
+        }
+
+        li:nth-child(3n+3){
+            color: rgb(235, 14, 43);
+        }
+
+        li:nth-child(odd){
+            background-color: rgb(207, 184, 199);
+        }
+
+        li:nth-child(even){
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!------------------------------------ z-index --------------------------------->
+    <!--z-index will work only for position: absolute, relative, fixed and sticky-->
+    <!-- Jiska z-index sabse zyada hoga vo box sabse upar aayega baaki neeche-->
+    <div>
+        <h2>Z-Index</h2>
+    </div>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+
+
+    <!------------------------------------ Flexbox --------------------------------->
+    < <h1>This is Flexbox Practice</h1>
+        <div class="container">
+            <div class="item" id="item-1">First Box</div>
+            <div class="item" id="item-2">Second Box</div>
+            <div class="item" id="item-3">Third Box</div>
+            <!-- <div class="item" id="item-4">Fourth Box</div>
+        <div class="item" id="item-5">Fifth Box</div>
+        <div class="item" id="item-6">Sixth Box</div> -->
+        </div>
+
+        <!-------------------------- Reponsive design (UNITS LIKE em, rem and vh/vw) ------------------------>
+        <div class="container2">
+            <h1>This Is Responsive Design</h1>
+            <h1 id="first">This is First Heading</h1>
+            <h1 id="second">This is Second Heading</h1>
+            <h1 id="third">This is Third Heading</h1>
+        </div>
+
+        <!------------------------------------ Media Queries------------------------------------>
+
+        <div class="Box" id="Box-1">Mai ek iphone hoon</div>
+        <div class="Box" id="Box-2">Mai ek Tablet hoon</div>
+        <div class="Box" id="Box-3">Mai ek Computer hoon</div>
+        <div class="Box" id="Box-4">Mai ek Widescreen Computer hoon</div>
+
+
+        <!------------------------------------ More Selectors------------------------------------>
+        <h3>This is heading for More On Selectors</h3>
+        <div class="container3">
+            <div class="row">
+                <ul>
+                    <li><p>This is inside li</p></li>
+                    <li>This Para will not get affected</li>
+                    <p>This Para is inside ul</p>
+                </ul>
+                <p>This Para is outside of ul</p>
+            </div>
+            <p>This is another paragraph</p>
+        </div>
+        <p>This is outermost paragraph</p>
+
+
+        <!------------------------- Attribute and nth child Pseudoselectors----------------------->
+
+        <div class="container4">
+            <h4>
+                <a href="https://google.com" target="_blank">Go To Google</a>
+                </h4>
+                <h4>
+                <a href="https://facebook.com" target="_self">Go To Facebook</a>
+            </h4>
+
+            <form action="" class="form-control">
+                <input type="text" placeholder="Enter Your Name">
+                <input type="password" placeholder="Enter Your password">
+                <input type="email" placeholder="Enter Your Email">
+                <input type="submit" value="submit">
+            </form>
+
+            <ul>
+                <li class="Item" id="Item-1">Item-1</li>
+                <li class="Item" id="Item-2">Item-2</li>
+                <li class="Item" id="Item-3">Item-3</li>
+                <li class="Item" id="Item-4">Item-4</li>
+                <li class="Item" id="Item-5">Item-5</li>
+                <li class="Item" id="Item-6">Item-6</li>
+                <li class="Item" id="Item-7">Item-7</li>
+                <li class="Item" id="Item-8">Item-8</li>
+                <li class="Item" id="Item-9">Item-9</li>
+                <li class="Item" id="Item-10">Item-10</li>
+            </ul>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Tutorial</title>
+    <style>
+        #btn {
+            padding: 10px 14px;
+            background-color: red;
+            border: 2px solid black;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .container6 {
+            text-align: center;
+            background-color: brown;
+            color: rgb(7, 7, 6);
+            border: 3px solid black;
+            border-radius: 10px;
+            padding: 10px 12px;
+            margin: 10px;
+            font-size: 25px;
+        }
+
+        #time {
+            font-weight: bold;
+            text-decoration: underline;
+
+        }
+
+        .container7 {
+            font-size: 23px;
+            background-color: blanchedalmond;
+            border: 2px solid grey;
+            padding: 34px;
+            margin: 4px;
+            text-align: center;
+        }
+
+        #Time {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <p>
+                This is a row in this container
+            </p>
+        </div>
+
+        <div class="container2">
+            <h1>Lorem ipsum dolor sit.</h1>
+            <div id="content"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ratione delectus quidem necessitatibus!
+                Ipsum quibusdam consectetur odit ab alias molestiae?</p>
+        </div>
+    </div>
+
+    <div>
+        <ul>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+            <li>Item-5</li>
+            <li>Item-6</li>
+            <li>Item-7</li>
+        </ul>
+    </div>
+
+    <div class="container3">Simple Si HTML</div>
+
+    <div id="main" class="container4">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>More about us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+
+    <div class="container4">Another container</div>
+
+    <div class="container5">
+        <h1>This is my Heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo odit consectetur sunt sit odio neque
+            voluptas a laborum optio temporibus modi expedita sed quod ipsam minus eveniet quaerat vel praesentium,
+            tempore sapiente ut. Magni quasi id sequi earum similique provident fugiat nihil, cumque distinctio qui
+            expedita impedit pariatur reprehenderit quae! Minima in excepturi iusto eos laudantium a voluptatibus
+            corporis modi?</p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+
+    <div class="container6">
+        Time now is: <span id="time"></span>
+    </div>
+
+    <div class="container7">
+        Current Time is: <span id="Time"></span>
+    </div>
+    <script>
+        //Write your js here
+        console.log('Hello world');
+        let a = 56;
+        console.log(a);
+        a = 90;
+        console.log(a);
+        a = 78;
+        var b = "bushra";
+        c = 34.5;
+        console.log(c);
+        c = -c;
+        console.log(c);
+        var num1 = 6;
+        var num2 = 9;
+        console.log("The value of num1 + num2 is" + " " + (num1 + num2));
+        console.log("The value of num1 - num2 is" + " " + (num1 - num2));
+        console.log("The value of num1 * num2 is" + " " + (num1 * num2));
+        console.log("The value of num1 / num2 is" + " " + (num1 / num2));
+        console.log("The value of num1 ** num2 is" + " " + (num1 ** num2));
+        console.log("The value of num1++ is" + " " + (num1++));
+        console.log("The value of ++num1 is" + " " + (++num1));
+        console.log("The value of num1-- is" + " " + (num1--));
+        console.log("The value of --num1 is" + " " + (--num1));
+
+
+        //----------------------------Strings-----------------------------
+        var string = "this";
+        console.log(string);
+        string = 'you"re';
+        console.log(string);
+        string = "that's";
+        console.log(string);
+
+        var name = 'Bushra';
+        var pet = 'Tom';
+        var message = "I'll be back soon!!";
+        var temp = `${name} is an 'amazing' girl. She has a pet named ${pet} "and" she has a message that is "${message}".`;
+        console.log(temp);
+
+        var len = name.length;
+        console.log(`The Length of the name ${name} is ${len}`);
+        len = message.length;
+        console.log(`The Length of the message is ${len}`);
+        len = pet.length;
+        console.log(`The Length of the pet name is ${len}`);
+
+        console.log("Hello\nWorld\nGood Morning\tEveryone");
+
+        let y = new String("This is the new String");
+        console.log(y);
+
+        document.getElementById('content').innerHTML = '<h3>This is a h3 Heading</h3>'
+
+
+        //-------------------------String Functions-----------------------------
+        var str = "This is a string";
+        console.log(str);
+        //First Occurence of a substring
+        var position = str.indexOf('a');
+        console.log(position);
+        //Last Occurence of a substring
+        position = str.lastIndexOf('is');
+        console.log(position);
+
+        var substr = str.slice(4, 9);
+        console.log(substr);
+
+        substr = str.substring(1, 7);
+        console.log(substr);
+
+        substr = str.substr(2, 8);
+        console.log(substr);
+
+        var replaced = str.replace('string', 'replaced string');
+        console.log(str);
+        console.log(replaced);
+
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+
+        var newString = str.concat(' extended String');
+        console.log(newString);
+
+        var strWithWhiteSpaces = "    This is   String  With White Spaces.    ";
+        console.log(strWithWhiteSpaces);
+        console.log(strWithWhiteSpaces.trim());
+
+        var char2 = str.charAt(8);
+        console.log(char2);
+
+
+
+        //-------------------Scope,if-else conditionals and switch cases-----------------------
+        var str1 = "This is a string 1";
+        console.log(str1);
+        let z = "u";
+        {
+            let z = "u5";
+            console.log(z);
+
+        }
+        console.log(z);
+
+        const w = "This cannot be changed";
+        /* w="Now I want to change c which will not change";*/
+        console.log(w);
+
+        let age = 2;
+        if (age > 18) {
+            console.log("You can vote");
+        }
+        else if (age == 15) {
+            console.log("Please come after 3 years");
+        }
+        else if (age == 2) {
+            console.log("You are just a kiddo");
+        }
+        else {
+            console.log("You can't vote");
+        }
+
+
+        const cups = 42;
+        switch (cups) {
+            case 4:
+                console.log("The value of cups is 4");
+                break;
+
+            case 41:
+                console.log("The value of cups is 41")
+                break;
+
+            case 42:
+                console.log("The value of cups is 42")
+                break;
+
+            case 43:
+                console.log("The value of cups is 43")
+                break;
+
+            default:
+                console.log("The value of cups is none of 4, 41, 42, 43")
+                break;
+        }
+
+
+        //------------------------------Arrays and Objects--------------------------------
+        let myVar = 34;
+        let myVar2 = "String";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;
+
+        let employee = {
+            name: "Bushra",
+            age: 20,
+            language: "Hindi",
+            language2: "English",
+        }
+        console.log(employee);
+
+        let names = [1, 2, 3, "Bushra", undefined];
+        console.log(names);
+        console.log(names[2]);
+
+        let names2 = new Array(23);
+        console.log(names2.length);
+
+        let names3 = new Array(41, 2, 563, "Bushra", undefined);
+        console.log(names3);
+
+        names3 = names3.sort();
+        console.log(names3);
+
+        names3.push("This is pushed");
+        console.log(names3);
+
+
+        //------------------------------Functions in Javascript--------------------------------
+        function greet(name, greetText) {
+            console.log(greetText + " " + name);
+            console.log(name + " is a good girl");
+        }
+
+        function sum(a, b, c) {
+            d = a + b + c;
+            return d;
+        }
+
+        let Name = "Bushra";
+        let Name1 = "Hoor";
+        let Name2 = "Saba";
+        let Name3 = "Zainab";
+        let greetText = "Good Morning";
+        /*console.log(Name + " is a good girl");
+        console.log(Name1 + " is a good girl");
+        console.log(Name2 + " is a good girl");
+        console.log(Name3 + " is a good girl");*/
+        greet(Name, greetText);
+        greet(Name1, greetText);
+        greet(Name2, greetText);
+        greet(Name3, greetText);
+
+        /*let returnVal = greet(Name3);
+        console.log(Name3);*/
+
+        let returnVal = sum(1, 2, 3);
+        console.log(returnVal);
+
+
+        //--------------------------Interaction: Alert, Prompt, Confirm-----------------------
+
+        //Alert in in-browser: Doesn't return anything
+        // alert("This is an alert message");
+
+        //Prompt in JS
+        /*let NAME = prompt("What is your name?","Guest");
+        console.log(NAME);*/
+
+        //Confirm in Js
+        // let deletePost = confirm("Do you really want to delete this post?");
+        //console.log(deletePost);
+        /*if(deletePost){
+            console.log("Your Post has been successfully deleted");
+        }
+        else{
+            console.log("Failed to delete your Post");
+        }*/
+
+
+        //--------------------------JS: for,while,forEach,Do While Looops -----------------------
+        let i = 0;
+        for (i = 0; i < 3; i++) {
+            console.log(i);
+        }
+
+        let friends = ["Bushra", "Hoor", "Zainab", "Saba"];
+        /*for(index=0;index<friends.length;index++){
+            console.log("Hello love, " + friends[index]);
+        }*/
+
+        friends.forEach(function f(element) {
+            console.log("Hello there, " + element + ", How you doing?");
+        });
+
+        for (element of friends) {
+            console.log("Hello Friend ," + element + " to modern javascript");
+        }
+
+        let employee2 = {
+            name: "Bushra",
+            salary: 100000,
+            channel: "Google"
+        }
+        for (key in employee2) {
+            console.log(`The ${key} of employee2 is ${employee2[key]}`);
+        }
+
+        let j = 0;
+        while (j < 5) {
+            console.log(`${j} is less than 5`);
+            j++;
+        }
+
+        let k = 87;
+        do {
+            console.log(`${k} is less than 4 and we are inside the do while loop`);
+            k++;
+        }
+        while (k < 4);
+
+
+        //--------------------------Navigation the DOM-----------------------
+        let main = document.getElementById('main');
+        console.log(main);
+
+        let nav = document.getElementById('nav');
+        console.log(nav);
+
+        let containers = document.getElementsByClassName('container3');
+        console.log(containers);
+
+        /*let sel = document.querySelector('container3');
+         console.log("Selector returns ", sel);*/
+
+        let sel = document.querySelectorAll('#nav');
+        console.log("Selector returns ", sel);
+
+
+        //--------------------------EEvents and listening to events-----------------------
+        let para = document.getElementById('para');
+        para.addEventListener('mouseover', function run() {
+            console.log("Mouse inside")
+        });
+
+        para.addEventListener('mouseout', function run() {
+            console.log("Mouse now went outside")
+        });
+
+        let btn = document.getElementById('btn');
+        btn.addEventListener('mouseover', function run() {
+            console.log("Mouse is inside the button")
+        });
+
+        btn.addEventListener('mouseout', function run() {
+            console.log("Mouse is now outside the button")
+        });
+
+        function toggleHide() {
+            let para = document.getElementById('para');
+            if (para.style.display != 'none') {
+                para.style.display = 'none';
+            }
+            else {
+                para.style.display = 'block';
+            }
+        }
+
+
+        //--------------------------setInterval and setTimeOut-----------------------
+        /*function greeting(){
+            console.log("Hello, Good Morning");
+        }
+        setTimeout(greeting,5000);
+       
+        function greetings(name,byeText){
+            console.log("Hello Good Morning " + name + " " + byeText);
+        }*/
+
+        // greetings('Bushra','Have a great day');
+        /*timeOut = setTimeout(greetings,5000,"Bushra","Have a nice day");
+        console.log(timeOut);
+        clearTimeout(timeOut);*/
+
+        /*interValId = setInterval(greetings,3000,"Bushra","Take care");
+        console.log(interValId);
+        clearInterval(interValId);*/
+
+        function displayTime() {
+            time = new Date();
+            // console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+        setInterval(displayTime, 1000);
+
+
+        //--------------------------Date and Time in JS-----------------------
+        let now = new Date();
+        console.log(now);
+
+        let dt = new Date(1000);
+        console.log(dt);
+
+        /*let newDate = new Date("2025-09-29");
+        console.log(newDate);*/
+
+        // let newDate = new Date(year, month, date, hours, minutes, seconds, milliseconds);
+        let newDate = new Date(2030, 8, 7, 5, 6, 1, 9);
+        console.log(newDate);
+
+        let yr = newDate.getFullYear();
+        console.log("The year is ", yr);
+
+        let mnth = newDate.getMonth();
+        console.log(mnth);
+
+        let dat = newDate.getDate();
+        console.log(dat);
+
+        let hrs = newDate.getHours();
+        console.log(hrs);
+
+        let min = newDate.getMinutes();
+        console.log(min);
+
+        let sec = newDate.getSeconds();
+        console.log(sec);
+
+        let mls = newDate.getMilliseconds();
+        console.log(mls);
+
+        newDate.setDate(20);
+        newDate.setMonth(10);
+        newDate.setFullYear(2001);
+        console.log(newDate);
+
+        setInterval(updateTime, 1000);
+
+        function updateTime() {
+            Time.innerHTML = new Date();
+        }
+
+
+        //--------------------------Arrow Functions in JS-----------------------
+        let greetings = ()=> {
+            console.log("Hello, Good Morning");
+        }
+        greetings();
+
+        setTimeout(()=>{
+            console.log("We are inside settimout");
+        },3000);
+
+        let summ = (a,b) => console.log("The sum of a and b is:",a+b);
+        summ(2,3);
+
+        let half = c => console.log("The half of c is:",c/2);
+        half(4);
+
+        let obj1={
+            names: ["Bushra","Hoor","Zainab","Saba"],
+            speak(){
+                this.names.forEach((student)=>{
+                    console.log("Hey you, " + student);
+                });
+                    
+                }          
+        }
+        obj1.speak();
+
+        let obj2 = {
+               greeting2 : "Hello Beautiful",
+               names2 : ["Bushra","Hoor","Zainab","Saba"],
+               speak(){
+                   this.names2.forEach((Students)=>{
+                       console.log(this.greeting2 + ", Good Morning " + Students);
+                   });
+               }
+        }
+        obj2.speak();
+
+
+        //--------------------------JS: Math Object-----------------------
+        //Printing the Math Object
+        let m = Math;
+        console.log(m);
+        //Printing the constants from Math Object
+        console.log("The value of Math.E is:",Math.E);
+        console.log("The value of Math.PI is:",Math.PI);
+        console.log("The value of Math.LN2 is:",Math.LN2);
+        console.log("The value of Math.LN10 is:",Math.LN10);
+        console.log("The value of Math.LOG2E is:",Math.LOG2E);
+        console.log("The value of Math.LOG10E is:",Math.LOG10E);
+        console.log("The value of Math.SQRT1_2 is:",Math.SQRT1_2);
+        console.log("The value of Math.SQRT2 is:",Math.SQRT2);
+
+        //Printing the functions from Math Object
+        let A = 32.5677;
+        let B = 89;
+        console.log("The value of A and B is:",A,B);
+        console.log("The value of A and B rounded is:",Math.round(A),Math.round(B));
+
+        console.log("3 raised to the power of 2 is:",Math.pow(3,2));
+        console.log("2 raised to the power of 12 is:",Math.pow(2,12));
+        console.log("1 raised to the power of 2 is:",Math.pow(1,2));
+
+        console.log("Square root of 36 is:",Math.sqrt(36));
+        console.log("Square root of 64 is:",Math.sqrt(64));
+        console.log("Square root of 50 is:",Math.sqrt(50));
+
+        //Ceil and Floor
+        console.log("5.8 rounded up to nearest number is:",Math.ceil(5.8));
+        console.log("5.8 rounded down to nearest number is:",Math.floor(5.8));
+
+        //Absolute Function
+        console.log("Absolute value of 5.66 is:",Math.abs(5.66));
+        console.log("Absolute value of -5.66 is:",Math.abs(-5.66));
+
+        //Trignometric functions
+        console.log("The value of sin(PI) is:",Math.sin(Math.PI));
+        console.log("The value of sin(PI/2) is:",Math.sin(Math.PI/2));
+        console.log("The value of tan(PI/2) is:",Math.tan(Math.PI/2));
+        console.log("The value of cos(PI/2) is:",Math.cos(Math.PI/2));
+
+        //Min and Max functions
+        console.log("The minimum value of 4, 5, 6 is:",Math.min(4,5,6));
+        console.log("The minimum value of 14, 5, 16 is:",Math.min(14,5,16));
+        console.log("The maximum value of 4, 5, 6 is:",Math.max(4,5,6));
+        console.log("The maximum value of 14, 5, 16 is:",Math.max(14,5,16));
+
+        //Generating a random number
+        let r = Math.random();
+        console.log("The random number is:",r);
+
+        //random number b/w 1 and 100
+        let a1 = 1;
+        let b1 = 100;
+        let r1_100 = a1 + (b1-a1)*Math.random();
+        console.log("The random number is:",r1_100);
+
+        //Random number b/w 50 and 60
+        let a2 = 50;
+        let b2 = 60;
+        let r50_60 = a2 + (b2-a2)*Math.random();
+        console.log("The random number is:",r50_60);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>/

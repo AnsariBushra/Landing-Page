@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+     <meta name="clock" content="">
+     <title>Analog Clock</title>
+     <style type="text/css" media="all">
+
+     *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     }
+
+    html {
+    font-size: 30px;
+    }
+
+   .wrapper {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100vw;
+     height: 100vh;
+     background: #916241;
+     }
+
+   .outer {
+      position: absolute;
+      width: 10rem;
+      height: 10rem;
+      top: 50%;
+      left: 50%;
+ transform: translate(-50%,-50%);
+  }
+
+   .frame {
+     background: #958368;
+     height: 100%;
+     width: 100%;
+     border-radius: 50%;
+     background-color: #FFDC89;
+     position: relative;
+     box-shadow: 8px -8px 20px 5px #0002,
+                        -8px 8px 20px 5px #0002;
+     }
+
+   .mark {
+     color: #964842;
+     font-weight: bold;
+     position: absolute
+  }
+
+  .mark:nth-child(1) {
+   top: 0;
+   width: 50px;
+   left: calc(50% - 25px);
+ }
+
+  .mark:nth-child(2) {
+    width: 50px;
+    top: calc(50% - 25px);
+    left: 0;
+ }
+
+   .mark:nth-child(3) {
+     width: 50px;
+     top: calc(50% - 25px);
+     right: 25px;
+ }
+ 
+    .mark:nth-child(4) {
+	bottom: 0;
+	width: 50px;
+	left: calc(50% - 25px);
+}
+
+   .niddles {
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+   .center {
+     width: 5%;
+     height: 5%;
+     background: #964842;
+     border-radius: 50%;
+     z-index: 3;
+ }
+
+   .hour_niddle {
+     height: 15%;
+     width: 2%;
+     background: red;
+     position: absolute;
+     transform: rotate(90deg);
+     transform-origin: bottom;
+     border-radius: 50%;
+     top: 35%;
+     z-index: 2;
+ }
+
+  .minute_niddle {
+    height: 20%;
+    width: 2%;
+    background: green;
+    position: absolute;
+    transform: rotate(90deg);
+    transform-origin: bottom;
+    border-radius: 50%;
+    top: 30%;
+    z-index: 1;
+ }
+
+   .second_niddle {
+     height: 25%;
+     width: 2%;
+     background: blue;
+     position: absolute;
+     transform: rotate(90deg);
+     transform-origin: bottom;
+     border-radius: 50%;
+     top: 25%;
+ }
+
+  </style>
+
+  <script type="text/javascript" charset="utf-8">
+
+    setInterval(timeStart, 1);
+
+    function timeStart() {
+       var date = new Date();
+       var hours = date.getHours()%12;
+       var min = date.getMinutes();
+       var sec = date.getSeconds();
+  
+  document.querySelector(".hour_niddle").style.transform = "rotate("+hours*30+"deg)";
+  
+  document.querySelector(".minute_niddle").style.transform = "rotate("+min*6+"deg)";
+
+  document.querySelector(".second_niddle").style.transform = "rotate("+sec*6+"deg)";
+        }
+
+        alert("just practicing the web again xD !!!");
+     </script>
+  </head>
+  <body>
+      <div class="container">
+        <div cllass="wrapper">
+          <div class="outer">
+            <div class="frame">
+                <h1 class="mark">12</h1>
+                <h1 class="mark">09</h1>
+                <h1 class="mark">03</h1>
+                <h1 class="mark">06</h1>
+                <div class="niddles">
+                  <div class="hour_niddle">
+                  </div>
+                  <div class="minute_niddle">
+                  </div>
+                  <div class="second_niddle">
+                  </div>
+                  <div class="center">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</body>
+</html>
